@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+    <title>
+        A django webpage
+    </title>
+    <head>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <h1><center>Welcome to django</center></h1>
+    </head>
+            <body>
+                <center>
+                    {% block content %}
+                    {% endblock %}
+                    <br>
+                    <a href="{% url 'post_create' %}"><h3>Click here to create new post!</h3> </a>
+                    <a href="{% url 'post_list' %}"><h2>Home Page</h2> </a>
+                </center>
+                <br>
+            </body>
+</html>
